@@ -1,0 +1,242 @@
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  min-height: 550px;
+  justify-content: center;
+  background-color: #e9e9e9;
+  padding: 70px 0px;
+}
+
+.dailyWeather {
+  height: 100%;
+  width: 700px;
+  /* background-color: #fafafa; */
+  background: linear-gradient(
+    180deg,
+    rgba(4, 73, 178, 1) 0%,
+    rgba(30, 137, 243, 1) 100%
+  );
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-bottom: 25px;
+}
+
+.hourlywWeather {
+  height: 484px;
+  width: 220px;
+  background-color: #f6f6f6;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  position: relative;
+  overflow: scroll;
+}
+.bottomContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.hoursGrid {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin: 0px 0px 0px 30px;
+}
+
+.informationText {
+  font-size: 10px;
+}
+.informationText a {
+  text-decoration: none;
+  color: #887474;
+}
+/* Location.jsx */
+.locationContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-top: 20px;
+}
+
+.searchBox {
+  padding: 10px;
+  border: 1px solid #dfe1e5;
+  border-radius: 24px;
+  width: 300px;
+  margin-right: 10px;
+}
+
+.searchButton {
+  background-color: #1a73e8;
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.searchButton:hover {
+  background-color: #0a3f8d;
+}
+
+.locationSearchox {
+  display: flex;
+  align-items: center;
+}
+
+/* dailyTemp.css */
+.dailyTempContainer {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 35px;
+}
+
+.dailyTempDataContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dailyDataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tempContainer {
+  font-size: 140px;
+  margin: 0;
+}
+
+.weathContainer {
+  font-size: 24px;
+  margin: 0px 50px 0px 0px;
+}
+
+.atmosphereContainer {
+  font-size: 18px;
+  margin: 0;
+}
+
+.iconContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dailyTempContainertwo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 35px;
+}
+
+.dailyTempDataContainerTwo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.iconContainerTwo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.atmosphereContainerTwo {
+  font-size: 14px;
+  margin: 0;
+}
+.dailyDataContainerTwo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tempContainerTwo {
+  font-size: 32px;
+  margin: 0;
+}
+.weathContainerTwo {
+  margin: 0;
+  font-size: 16px;
+}
+
+/* temperaturegrid */
+
+.tempGridContainer {
+  width: 100%;
+  min-height: 195px;
+  border: 1px solid grey;
+}
+
+.tempGridLayout {
+  height: 100px;
+  width: 75px;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.tempGridElement {
+  margin: 3px 0px;
+}
+
+.tempGridElementTemp {
+  margin: 3px;
+  color: black;
+  font-size: 18px;
+}
+
+.tempGridElementWeather {
+  margin: 3px;
+  color: white;
+  font-size: 12px;
+}
+.tempGridElementHourWeather {
+  margin: 3px;
+  color: #887474;
+  font-size: 12px;
+}
+
+/* TimeComponent */
+.greetingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.city {
+  font-size: 26px;
+  margin: 22px 0px 15px;
+}
+
+.tempDetails {
+  display: flex;
+  gap: 25px;
+}
