@@ -11,7 +11,7 @@ function TimeComponent({ city, feelLike }) {
       <div className="tempDetails">
         <div>
           <FontAwesomeIcon icon={faTemperatureLow} />
-          <span>&{Math.trunc(feelLike?.temp_min - 273.15)}&#176;</span>
+          <span>{Math.trunc(feelLike?.temp_min - 273.15)}&#176;</span>
         </div>
         <div>
           <FontAwesomeIcon icon={faTemperatureHigh} />
