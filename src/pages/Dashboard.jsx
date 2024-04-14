@@ -42,33 +42,36 @@ function Dashboard() {
     setCity(value);
   };
 
-  return isLoading || isForcastDataLoading ? (
-    <p className="loader">Fetching data...</p>
-  ) : (
+  return (
     <div className="container">
       <div className="dailyWeather">
         <Location handleClick={handleClick} />
 
-        <DailyTemp
-          humidity={data.humidity}
-          temp={data.currentTemp}
-          windspeed={data.windspeed}
-          weather={weather}
-          invalidCity={data.cityErrorMessage}
-        />
-
-        <div className="bottomContainer">
-          {!data.cityErrorMessage &&
-            weekDays.map((days, index) => (
-              <TempGrid
-                key={days}
-                days={days}
-                temp={temp[index + 8]}
-                weather={weather[index + 8]}
-                isCenterContainer={true}
-              />
-            ))}
-        </div>
+        {isLoading || isForcastDataLoading ? (
+          <p className="dailyTempContainerError">Fetching data...</p>
+        ) : (
+          <>
+            <DailyTemp
+              humidity={data.humidity}
+              temp={data.currentTemp}
+              windspeed={data.windspeed}
+              weather={weather}
+              invalidCity={data.cityErrorMessage}
+            />
+            <div className="bottomContainer">
+              {!data.cityErrorMessage &&
+                weekDays.map((days, index) => (
+                  <TempGrid
+                    key={days}
+                    days={days}
+                    temp={temp[index + 8]}
+                    weather={weather[index + 8]}
+                    isCenterContainer={true}
+                  />
+                ))}
+            </div>
+          </>
+        )}
       </div>
       <div className="hourlywWeather">
         {!data.cityErrorMessage && (

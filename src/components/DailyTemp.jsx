@@ -3,7 +3,7 @@ import { faTint, faWind } from "@fortawesome/free-solid-svg-icons";
 
 function DailyTemp({ temp, humidity, windspeed, weather, invalidCity }) {
   return invalidCity ? (
-    <p className="dailyTempContainer">City Not Found</p>
+    <p className="dailyTempContainerError">City Not Found</p>
   ) : (
     <div className="dailyTempContainer">
       <div className="dailyTempDataContainer">
