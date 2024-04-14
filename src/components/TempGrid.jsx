@@ -4,13 +4,21 @@ function TempGrid({ time, temp, weather, days, isCenterContainer }) {
   return (
     <div className="tempGridLayout">
       {isCenterContainer ? (
-        <p className="tempGridElement">{days}</p>
+        <p className="tempGridElementDays">{days}</p>
       ) : (
         <p className="tempGridElement">
           {time} {ampm}
         </p>
       )}
-      <p className="tempGridElementTemp">{Math.trunc(temp - 273.15)}&#176;</p>
+      <p
+        className={
+          isCenterContainer
+            ? "tempGridElementTempWeekly"
+            : "tempGridElementTempHourly"
+        }
+      >
+        {Math.trunc(temp - 273.15)}&#176;
+      </p>
       <p
         className={
           isCenterContainer

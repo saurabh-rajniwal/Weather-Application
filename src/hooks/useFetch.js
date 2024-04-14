@@ -8,7 +8,8 @@ const useFetch = (url) => {
     setIsLoading(true);
     fetch(url)
       .then((response) => response.json())
-      .then((response) => (setIsLoading(false), setApiResponse(response)));
+      .then((response) => (setIsLoading(false), setApiResponse(response)))
+      .catch((err) => setApiResponse(err));
   }, [url]);
 
   return { apiResponse, isLoading };

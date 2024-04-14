@@ -54,22 +54,26 @@ function Dashboard() {
           temp={data.currentTemp}
           windspeed={data.windspeed}
           weather={weather}
+          invalidCity={data.cityErrorMessage}
         />
 
         <div className="bottomContainer">
-          {weekDays.map((days, index) => (
-            <TempGrid
-              key={days}
-              days={days}
-              temp={temp[index + 8]}
-              weather={weather[index + 8]}
-              isCenterContainer={true}
-            />
-          ))}
+          {!data.cityErrorMessage &&
+            weekDays.map((days, index) => (
+              <TempGrid
+                key={days}
+                days={days}
+                temp={temp[index + 8]}
+                weather={weather[index + 8]}
+                isCenterContainer={true}
+              />
+            ))}
         </div>
       </div>
       <div className="hourlywWeather">
-        <TimeComponent city={city} feelLike={data.feelLike} />
+        {!data.cityErrorMessage && (
+          <TimeComponent city={city} feelLike={data.feelLike} />
+        )}
         <div className="hoursGrid">
           {newDate.map((hours, index) => (
             <TempGrid
@@ -80,18 +84,20 @@ function Dashboard() {
               isCenterContainer={false}
             />
           ))}
-          <div className="informationText">
-            <span>
-              Want to know more
-              <a
-                href={`https://en.wikivoyage.org/wiki/${city}`}
-                target="_blank"
-              >
-                {" "}
-                Lets Search
-              </a>
-            </span>
-          </div>
+          {!data.cityErrorMessage && (
+            <div className="informationText">
+              <span>
+                Want to know more
+                <a
+                  href={`https://en.wikivoyage.org/wiki/${city}`}
+                  target="_blank"
+                >
+                  {" "}
+                  Lets Search
+                </a>
+              </span>
+            </div>
+          )}
         </div>
       </div>
     </div>

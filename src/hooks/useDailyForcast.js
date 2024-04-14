@@ -9,12 +9,14 @@ function useDailyForcast(city) {
   const humidity = currentWeatherData?.main?.humidity;
   const feelLike = currentWeatherData?.main;
   const windspeed = currentWeatherData?.wind?.speed;
+  const cityErrorMessage = currentWeatherData?.message;
 
   const data = {
     currentTemp,
     humidity,
     feelLike,
     windspeed,
+    cityErrorMessage,
   };
   return { data, isLoading };
 }

@@ -1,8 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTint, faWind } from "@fortawesome/free-solid-svg-icons";
 
-function DailyTemp({ temp, humidity, windspeed, weather }) {
-  return (
+function DailyTemp({ temp, humidity, windspeed, weather, invalidCity }) {
+  return invalidCity ? (
+    <p className="dailyTempContainer">City Not Found</p>
+  ) : (
     <div className="dailyTempContainer">
       <div className="dailyTempDataContainer">
         <p className="tempContainer">{Math.trunc(temp - 273.15)}&#176;</p>
