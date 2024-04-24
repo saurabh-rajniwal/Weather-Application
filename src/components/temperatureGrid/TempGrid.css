@@ -1,0 +1,43 @@
+.tempGridContainer {
+  height: 100px;
+  width: 75px;
+  border: 1px solid #cbcbcb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 15px;
+}
+
+.tempGridElementDays__days {
+  margin: 7px 0px;
+  color: white;
+}
+
+.tempGridElementDays__hour {
+  margin: 8px 0px;
+  /* color: white; */
+}
+
+.tempGridElementDays__tempWeekly {
+  margin: 3px;
+  color: white;
+  font-size: 18px;
+}
+
+.tempGridElementDays__tempHourly {
+  margin: 3px;
+  color: black;
+  font-size: 18px;
+}
+
+.tempGridElementDays__dailyWeather {
+  margin: 3px;
+  color: white;
+  font-size: 12px;
+}
+
+.tempGridElementDays__hourWeather {
+  margin: 3px;
+  color: #887474;
+  font-size: 12px;
+}

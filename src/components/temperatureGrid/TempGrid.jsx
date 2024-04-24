@@ -1,20 +1,22 @@
+import "./TempGrid.css";
+
 function TempGrid({ time, temp, weather, days, isCenterContainer }) {
   const ampm = time >= 12 ? "PM" : "AM";
 
   return (
-    <div className="tempGridLayout">
+    <div className="tempGridContainer">
       {isCenterContainer ? (
-        <p className="tempGridElementDays">{days}</p>
+        <p className="tempGridElementDays__days">{days}</p>
       ) : (
-        <p className="tempGridElement">
+        <p className="tempGridElementDays__hour">
           {time} {ampm}
         </p>
       )}
       <p
         className={
           isCenterContainer
-            ? "tempGridElementTempWeekly"
-            : "tempGridElementTempHourly"
+            ? "tempGridElementDays__tempWeekly"
+            : "tempGridElementDays__tempHourly"
         }
       >
         {Math.trunc(temp - 273.15)}&#176;
@@ -22,8 +24,8 @@ function TempGrid({ time, temp, weather, days, isCenterContainer }) {
       <p
         className={
           isCenterContainer
-            ? "tempGridElementWeather"
-            : "tempGridElementHourWeather"
+            ? "tempGridElementDays__dailyWeather"
+            : "tempGridElementDays__hourWeather"
         }
       >
         {weather}

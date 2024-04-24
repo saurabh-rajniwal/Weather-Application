@@ -1,0 +1,111 @@
+.appContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 492px;
+  justify-content: center;
+  margin: 90px 50px;
+  border-radius: 24px;
+}
+
+@media screen and (max-width: 810px) {
+  .appContainer {
+    flex-direction: column;
+    margin: 0px;
+  }
+}
+
+.appcontainer__dailyWeather {
+  max-width: 700px;
+  flex: 1;
+  background: linear-gradient(
+    180deg,
+    rgba(4, 73, 178, 1) 0%,
+    rgba(30, 137, 243, 1) 100%
+  );
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-bottom: 25px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media screen and (max-width: 810px) {
+  .appcontainer__dailyWeather {
+    max-width: none;
+    border-radius: 0;
+  }
+}
+
+.appcontainer__dailyWeather--dataFetch {
+  font-size: 32px;
+  color: white;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 35px;
+}
+
+.appcontainer__dailyWeather--daysForecast {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 0px 20px;
+}
+
+.appcontainer__hourlyWeather {
+  width: 225px;
+  background-color: #f6f6f6;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  overflow: auto;
+  position: relative;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+@media screen and (max-width: 810px) {
+  .appcontainer__hourlyWeather {
+    width: 100%;
+    border-radius: 0;
+    height: 420px;
+    overflow: inherit;
+  }
+}
+
+.appcontainer__hourlyWeather--hoursGrid {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 11px;
+  margin: 0px 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-width: 810px) {
+  .appcontainer__hourlyWeather--hoursGrid {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 11px;
+  }
+}
+
+.appcontainer__hourlyWeather--citySearch {
+  font-size: 10px;
+  text-align: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.appcontainer__hourlyWeather--citySearch a {
+  text-decoration: none;
+  color: #887474;
+}

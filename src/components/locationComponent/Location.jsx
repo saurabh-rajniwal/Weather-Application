@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./Location.css";
 
 function Location({ handleClick }) {
   const [searchValue, setSearchValue] = useState("");
@@ -20,17 +21,20 @@ function Location({ handleClick }) {
   };
 
   return (
-    <div className="locationContainer">
-      <div className="locationSearchox">
+    <div className="searchContainer">
+      <div className="searchContainer__locationSearchox">
         <input
           type="text"
           value={searchValue}
           onChange={searchCity}
-          className="searchBox"
+          className="searchContainer__locationSearchox--searchBox"
           placeholder="Search location"
           onKeyUp={handleKeyPress}
         />
-        <button onClick={handleSearch} className="searchButton">
+        <button
+          onClick={handleSearch}
+          className="searchContainer__locationSearchox--searchButton"
+        >
           Search
         </button>
       </div>

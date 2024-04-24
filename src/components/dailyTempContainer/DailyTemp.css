@@ -1,0 +1,67 @@
+.daily-temp__error {
+  font-size: 32px;
+  color: white;
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 35px;
+}
+
+.daily-temp {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 35px;
+}
+
+@media screen and (max-width: 810px) {
+  .daily-temp {
+    min-height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 0px;
+  }
+}
+
+.daily-temp__main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.daily-temp__temperature {
+  font-size: 140px;
+  margin: 0;
+  line-height: 1;
+}
+
+.daily-temp__weather {
+  font-size: 24px;
+  margin: 0px 50px 0px 0px;
+}
+
+.daily-temp__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.daily-temp__detail {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.daily-temp__humidity {
+  font-size: 18px;
+  margin: 0;
+}

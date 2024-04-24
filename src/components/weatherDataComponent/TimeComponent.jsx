@@ -3,12 +3,13 @@ import {
   faTemperatureHigh,
   faTemperatureLow,
 } from "@fortawesome/free-solid-svg-icons";
+import "./TimeComponent.css";
 
 function TimeComponent({ city, feelLike }) {
   return (
-    <div className="greetingContainer">
-      <p className="city">{city}</p>
-      <div className="tempDetails">
+    <div className="weatherDetailContainer">
+      <p className="weatherDetailContainer__city">{city}</p>
+      <div className="weatherDetailContainer__tempDetails">
         <div>
           <FontAwesomeIcon icon={faTemperatureLow} />
           <span>{Math.trunc(feelLike?.temp_min - 273.15)}&#176;</span>

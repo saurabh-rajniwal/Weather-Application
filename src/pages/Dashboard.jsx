@@ -1,11 +1,12 @@
 import { useState } from "react";
-import DailyTemp from "../components/DailyTemp";
-import Location from "../components/Location";
-import TempGrid from "../components/TempGrid";
-import TimeComponent from "../components/TimeComponent";
+import DailyTemp from "../components/dailyTempContainer/DailyTemp";
+import Location from "../components/locationComponent/Location";
+import TempGrid from "../components/temperatureGrid/TempGrid";
+import TimeComponent from "../components/weatherDataComponent/TimeComponent";
 import useFetch from "../hooks/useFetch";
 import { API_URLS } from "../constants/constants";
 import useDailyForcast from "../hooks/useDailyForcast";
+import "./Dashboard.css";
 
 function Dashboard() {
   const [city, setCity] = useState("Delhi");
@@ -43,12 +44,13 @@ function Dashboard() {
   };
 
   return (
-    <div className="container">
-      <div className="dailyWeather">
+    <div className="appContainer">
+      <div className="appcontainer__dailyWeather">
         <Location handleClick={handleClick} />
-
         {isLoading || isForcastDataLoading ? (
-          <p className="dailyTempContainerError">Fetching data...</p>
+          <p className="appcontainer__dailyWeather--dataFetch">
+            Fetching data...
+          </p>
         ) : (
           <>
             <DailyTemp
@@ -58,7 +60,7 @@ function Dashboard() {
               weather={weather}
               invalidCity={data.cityErrorMessage}
             />
-            <div className="bottomContainer">
+            <div className="appcontainer__dailyWeather--daysForecast">
               {!data.cityErrorMessage &&
                 weekDays.map((days, index) => (
                   <TempGrid
@@ -73,11 +75,11 @@ function Dashboard() {
           </>
         )}
       </div>
-      <div className="hourlywWeather">
+      <div className="appcontainer__hourlyWeather">
         {!data.cityErrorMessage && (
           <TimeComponent city={city} feelLike={data.feelLike} />
         )}
-        <div className="hoursGrid">
+        <div className="appcontainer__hourlyWeather--hoursGrid">
           {newDate.map((hours, index) => (
             <TempGrid
               key={hours}
@@ -88,7 +90,7 @@ function Dashboard() {
             />
           ))}
           {!data.cityErrorMessage && (
-            <div className="informationText">
+            <div className="appcontainer__hourlyWeather--citySearch">
               <span>
                 Want to know more
                 <a
