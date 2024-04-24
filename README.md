@@ -4,10 +4,10 @@ The Weather Dashboard is a web application that displays weather information for
 
 Features
 
-    - Location Selection: Choose a city to fetch its weather data.
-    - Daily Forecast: View the daily weather forecast, including temperature, humidity, wind speed, and general weather conditions.
-    - Hourly Forecast: Get an hourly breakdown of the temperature and weather conditions for the selected city.
-    - External Links: Easily link to additional information about the selected city.
+- Location Selection: Choose a city to fetch its weather data.
+- Daily Forecast: View the daily weather forecast, including temperature, humidity, wind speed, and general weather conditions.
+- Hourly Forecast: Get an hourly breakdown of the temperature and weather conditions for the selected city.
+- External Links: Easily link to additional information about the selected city.
 
 Prerequisites
 
