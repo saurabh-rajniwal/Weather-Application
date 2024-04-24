@@ -21,12 +21,18 @@ Features
     Hourly Forecast: Get an hourly breakdown of the temperature and weather conditions for the selected city.
     External Links: Easily link to additional information about the selected city.
 
-To run this project, create a .env folder in your local setup after cloning the project.
-Copy code from .env.sample file and use your OPENWEATHER API key.
+Prerequisites
 
-Then type npm run dev in your terminal.
+    node version (18.x.x)
+    npm package
+
+Instalation
+
+    Clone Project
+    Install npm package
+    Create a .env folder in your local setup
+    Copy code from .env.sample folder - add your OPENWEATHER API key
+    Save all the file
+    Run project using npm run dev in your terminal
 
 Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
