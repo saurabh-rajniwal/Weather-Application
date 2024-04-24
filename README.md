@@ -11,14 +11,14 @@ Features
 
 Prerequisites
 
-    - node version (18.x.x)
-    - npm package
+- node version (18.x.x)
+- npm package
 
 Instalation
 
-    - Clone Project
-    - Install npm package
-    - Create a .env folder in your local setup
-    - Copy code from .env.sample folder - add your OPENWEATHER API key
-    - Save all the file
-    - Run project using npm run dev in your terminal
+- Clone Project
+- Install npm package
+- Create a .env folder in your local setup
+- Copy code from .env.sample folder - add your OPENWEATHER API key
+- Save all the file
+- Run project using npm run dev in your terminal
