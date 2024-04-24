@@ -1,5 +1,7 @@
 # Weather Dashboard
 
+![Weather Dashboard](./weather-dashboard.png)
+
 The Weather Dashboard is a web application that displays weather information for a given city. It provides both daily and hourly weather forecasts, allowing users to quickly and easily check weather conditions. The app fetches weather data from a weather API and displays it in a user-friendly format.
 
 Features
